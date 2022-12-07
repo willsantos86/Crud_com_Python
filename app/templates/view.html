@@ -9,14 +9,14 @@
     <body>
     <nav class="navbar shadow p-3 mb-5 bg-body rounded" style="background-color: #e3f2fd;">
           <div class="container-fluid">
-            <a class="navbar-brand"><h2>Visualização</h2></a>
+            <a class="navbar-brand text-align-center"><h1>Visualização</h1></a>
             <!--<form method="get" class="d-flex" role="search">
                 <input class="form-control me-2 col-3" type="text" id="search" name="search" placeholder="Buscar..." aria-label="Search">
                 <button class="btn btn-outline-primary" type="submit">Buscar</button>
             </form>-->
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <!--<a href="/form/" class="btn btn-outline-success me-md-2 btn-lg">Adicionar</a>-->
-                <a href="/" class="btn btn-outline-info me-md-2 btn-lg">Voltar</a>
+                <a href="/" class="btn btn-info me-md-2 btn-lg">Voltar</a>
             </div>
           </div>
     </nav>
@@ -26,21 +26,23 @@
         <div class="col-8 m-auto pt-2 pb-2 text-center">
             <a href="/" class="btn btn-info">Voltar</a>
         </div>-->
-        <div class="col-4 d-flex flex-row shadow p-2 mb-2 bg-light rounded">
-                <div class="p-2"><h5>Nome: </h5></div><div class="p-2"><h5>{{ db.nome }}</h5></div>
+
+        <div class="col-5 d-flex flex-row shadow p-2 ms-5 mb-2 bg-light rounded">
+                <div class="p-2 text-primary"><h5>Nome: </h5></div><div class="p-2"><h5>{{ db.nome }}</h5></div>
         </div>
-        <div class="col-5 d-flex flex-row shadow p-2 mb-2 bg-light rounded">
-                <div class="p-2"><h5>Email: </h5></div><div class="p-2"><h5>{{ db.email }}</h5></div>
+        <div class="col-6 d-flex flex-row shadow p-2 ms-5 mb-2 bg-light rounded">
+                <div class="p-2 text-primary"><h5>Email: </h5></div><div class="p-2"><h5>{{ db.email }}</h5></div>
         </div>
-        <div class="col-6 d-flex flex-row shadow p-2 mb-2 bg-light rounded">
-                <div class="p-2"><h5>Telefone: </h5></div><div class="p-2"><h5>{{ db.telefone }}</h5></div>
+        <div class="col-7 d-flex flex-row shadow p-2 ms-5 mb-2 bg-light rounded">
+                <div class="p-2 text-primary"><h5>Telefone: </h5></div><div class="p-2"><h5>{{ db.telefone }}</h5></div>
         </div>
-        <div class="col-7 d-flex flex-row shadow p-2 mb-2 bg-light rounded">
-                <div class="p-2"><h5>CPF: </h5></div><div class="p-2"><h5>{{ db.cpf }}</h5></div>
+        <div class="col-8 d-flex flex-row shadow p-2 ms-5 mb-2 bg-light rounded">
+                <div class="p-2 text-primary"><h5>CPF: </h5></div><div class="p-2"><h5>{{ db.cpf }}</h5></div>
         </div>
-        <div class="col-8 d-flex flex-row shadow p-2 mb-2 bg-light rounded">
-                <div class="p-2"><h5>Data Nascimento: </h5></div><div class="p-2"><h5>{{ db.data_nascimento }}</h5></div>
+        <div class="col-9 d-flex flex-row shadow p-2 ms-5 mb-2 bg-light rounded">
+                <div class="p-2 text-primary"><h5>Data Nascimento: </h5></div><div class="p-2"><h5>{{ db.data_nascimento }}</h5></div>
         </div>
+
     </body>
 
 </html>

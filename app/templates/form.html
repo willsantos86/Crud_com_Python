@@ -10,14 +10,14 @@
 
     <nav class="navbar shadow p-3 mb-5 bg-body rounded" style="background-color: #e3f2fd;">
           <div class="container-fluid">
-            <a class="navbar-brand"><h2>Novo Cadastro</h2></a>
+            <a class="navbar-brand"><h1>Novo Cadastro</h1></a>
             <!--<form method="get" class="d-flex" role="search">
                 <input class="form-control me-2 col-3" type="text" id="search" name="search" placeholder="Buscar..." aria-label="Search">
                 <button class="btn btn-outline-primary" type="submit">Buscar</button>
             </form>-->
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <!--<a href="/form/" class="btn btn-outline-success me-md-2 btn-lg">Adicionar</a>-->
-                <a href="/" class="btn btn-outline-info me-md-2 btn-lg">Voltar</a>
+                <a href="/" class="btn btn-info me-md-2 btn-lg">Voltar</a>
             </div>
           </div>
         </nav>
@@ -31,15 +31,16 @@
             <div class="col-5 m-auto pt-3 pb-2 shadow p-3 mb-5 bg-light rounded">
 
             <div id="result"></div>
-            <form class="col-1"  name="form" id="form" action="{% if db %}/update/{{ db.id }}/{% else %}/create/{% endif %}" method="post">
+            <form class="col-5" name="form" id="form" action="{% if db %}/update/{{ db.id }}/{% else %}/create/{% endif %}" method="post">
                 {% csrf_token %}
                 <!--{{ form.as_p }}-->
-                <div class="form-group mt-3"><h6>Nome:{{ form.nome}}</h6></div>
-                <div class="form-group mt-3"><h6>Email: {{ form.email}}</h6></div>
-                <div class="form-group mt-3"><h6>Telefone: {{ form.telefone}}</h6></div>
-                <div class="form-group mt-3"><h6>CPF: {{ form.cpf}}</h6></div>
-                <div class="form-group mt-3"><h6>Data de Nascimento: {{ form.data_nascimento}}</h6></div>
+                <div class="form-group mt-3"><h6>Nome: {{ form.nome }}</h6></div>
+                <div class="form-group mt-3"><h6>Email: {{ form.email }}</h6></div>
+                <div class="form-group mt-3"><h6>Telefone: {{ form.telefone }}</h6></div>
+                <div class="form-group mt-3"><h6>CPF: {{ form.cpf }}</h6></div>
+                <div class="form-group mt-3"><h6>Data de Nascimento: {{ form.data_nascimento }}</h6></div>
                 <input type="submit" class="btn btn-success btn-md mt-4" value="Salvar">
+
             </form>
         </div>
 
