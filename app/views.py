@@ -1,12 +1,23 @@
 from django.shortcuts import render, redirect
 from app.forms import DadosForm
 from app.models import Dados
+from django.core.paginator import Paginator
 
 
 # Create your views here.
 def index(request):
     data = {}
-    data['db'] = Dados.objects.all()
+    search = request.GET.get('search')
+    if search:
+        data['db'] = Dados.objects.filter(nome__icontains=search)
+    else:
+        data['db'] = Dados.objects.all()
+
+    #data['db'] = Dados.objects.all()
+    #all = Dados.objects.all()
+    #paginator = Paginator(all, 3)
+    #pages = request.GET.get('page')
+    #data['db'] = paginator.get_page(pages)
     return render(request, 'index.html', data)
 
 def form(request):
@@ -42,5 +53,8 @@ def update(request, pk):
         form.save()
         return redirect('index')
 
-
+def delete(request, pk):
+    db = Dados.objects.get(pk=pk)
+    db.delete()
+    return redirect('index')
 
